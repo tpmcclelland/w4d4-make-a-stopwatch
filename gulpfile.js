@@ -30,11 +30,11 @@ gulp.task('browserSync', function() {
     });
 });
 
-gulp.task('sass', function () {
-  return gulp.src('./css/**/*.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./css'));
-});
+// gulp.task('sass', function () {
+//   return gulp.src('./css/**/*.scss')
+//     .pipe(sass().on('error', sass.logError))
+//     .pipe(gulp.dest('./css'));
+// });
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {
@@ -50,6 +50,7 @@ gulp.task('sass:watch', function () {
 
 gulp.task('serve', ['sass', 'browserSync'], function(){
     gulp.watch("*.html").on('change', browserSync.reload);
+    gulp.watch("./js/**/*.js").on('change', browserSync.reload);
     gulp.watch("./css/**/*.scss", ['sass']);
     // gulp.watch("css/*.css").on('change', browserSync.reload);
 });

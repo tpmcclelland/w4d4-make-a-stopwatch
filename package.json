@@ -18,6 +18,7 @@
   "homepage": "https://github.com/tpmcclelland/w4d4-make-a-stopwatch#readme",
   "dependencies": {
     "accounting-js": "^1.1.1",
+    "animate.css": "^3.5.2",
     "moment": "^2.15.1"
   },
   "devDependencies": {

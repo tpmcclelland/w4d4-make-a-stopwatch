@@ -1,4 +1,73 @@
+@import '../node_modules/animate.css/animate.min.css';
+
 * { box-sizing: border-box; }
 img { width: 100%; }
 
 html body { height: 100%;}
+
+body {
+    padding: 50px;
+}
+
+.wrapper {
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    padding: 20px;
+}
+
+.watch-frame {
+    // flex: 1;
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    background: black;
+    color: white;
+}
+
+.watch-type {
+    color: RGBA(229, 151, 55, 1.00);
+    padding: 8px 15px 5px 5px;
+    font-size: 20px;
+}
+
+.time {
+    text-align: right;
+    padding: 8px 15px 5px 5px;
+    color: lightgrey;
+    font-size: 20px;
+}
+
+#start-btn {
+    position: relative;
+    top: -110px;
+    left: 77px;
+    border-radius: 100%;
+}
+
+#canvas {
+    // color: white;
+    // background: white
+    // z-index: -1;
+    margin: -5px;
+    position: relative;
+    top: -13px;
+}
+
+.timer-window {
+    width: 200px;
+    height: 40px;
+    // border: 1px solid white;
+    margin: 20px;
+    padding: 5px;
+    position: relative;
+    top: -130px;
+    font-size: 30px;
+    left: 5px;
+}
+
+#shortcuts {
+    padding: 20px;
+}
