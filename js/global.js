@@ -192,21 +192,21 @@ function startTextAnimation() {
     increaseBlue ? blueCounter++ : blueCounter--
     increaseGreen ? greenCounter += getRandomNumber() : greenCounter--
 
-    if (redCounter >= 254) {
+    if (redCounter >= 250) {
         increaseRed = false
-    } else if (redCounter === 1) {
+    } else if (redCounter === 25) {
         increaseRed = true
     }
 
-    if (blueCounter >= 250) {
+    if (blueCounter >= 225) {
         increaseBlue = false
-    } else if (blueCounter === 1) {
+    } else if (blueCounter === 50) {
         increaseBlue = true
     }
 
-    if (greenCounter >= 245) {
+    if (greenCounter >= 200) {
         increaseGreen = false
-    } else if (greenCounter === 1) {
+    } else if (greenCounter === 75) {
         increaseGreen = true
     }
 
