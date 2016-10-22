@@ -82,7 +82,7 @@ body {
   z-index: 10;
 }
 
-.minutes-container, .hours-container, .seconds-container {
+.minutes-container, .tenths-container, .seconds-container {
   position: absolute;
   top: 0;
   right: 0;
@@ -90,24 +90,34 @@ body {
   left: 0;
 }
 
-.minutes {
+.tenths {
+  background: red;
+  height: 20%;
+  left: 48.75%;
+  position: absolute;
+  top: 30%;
+  transform-origin: 50% 100%;
+  width: 1%;
+}
+
+.seconds {
   background: #000;
   height: 40%;
   left: 49%;
   position: absolute;
   top: 10%;
   transform-origin: 50% 100%;
-  width: 2%;
+  width: 1.5%;
 }
 
-.seconds {
+.minutes {
   background: #000;
   height: 45%;
-  left: 49.5%;
+  left: 48.5%;
   position: absolute;
   top: 14%;
   transform-origin: 50% 80%;
-  width: 1%;
+  width: 2.5%;
   z-index: 8;
 }
 

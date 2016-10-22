@@ -100,6 +100,8 @@ function runCounters(start) {
 
     if (start) {
         tenthsCounter++
+        document.querySelector('.tenths-container').style.transform = 'rotateZ(' + tenthsCounter * 6 + 'deg)'
+
         if (tenthsCounter === 100) {
             secondsCounter++
             document.querySelector('.seconds-container').style.transform = 'rotateZ(' + secondsCounter * 6 + 'deg)'
@@ -138,6 +140,8 @@ function runCounters(start) {
         document.querySelector('.minutes-container').style.transform = 'rotateZ(0deg)'
 
         document.querySelector('.seconds-container').style.transform = 'rotateZ(0deg)'
+
+        document.querySelector('.tenths-container').style.transform = 'rotateZ(0deg)'
         return 0
     }
 
