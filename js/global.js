@@ -5,9 +5,13 @@ var minsCounter = 0
 var timer
 var pausedTimer
 var paused = true //on page load timer is "paused"
+var soundOn = false
 
 //create event listeners for click and dblclick on start btn
 document.getElementById('start-btn').addEventListener('click', startBtnClickHandler)
+
+//create event listeners for click and dblclick on start btn
+document.getElementById('sound-btn').addEventListener('click', soundBtnClickHandler)
 
 document.getElementById('reset-btn').addEventListener('click', resetClickHandler)
 
@@ -15,6 +19,23 @@ document.getElementById('start-btn').addEventListener('dblclick', resetClickHand
 
 //event listeners for keyboard shortcuts
 window.addEventListener('keypress', keyboardShortcutsHandler)
+
+function soundBtnClickHandler(e) {
+    if (soundOn) {
+        soundOn = false
+        e.target.innerHTML = 'Enable Sound'
+        if (paused !== true) {
+            document.querySelector('audio').stop()
+        }
+    } else {
+        soundOn = true
+        e.target.innerHTML = 'Disable Sound'
+        if (paused !== true) {
+            document.querySelector('audio').play()
+        }
+    }
+
+}
 
 function keyboardShortcutsHandler(e) {
     if (e.ctrlKey && e.key === 's') {
@@ -91,6 +112,7 @@ function reset() {
     runCounters(false)
     document.getElementById('timer-window').innerHTML = '00:00:00'
     document.getElementById('start-btn').innerHTML = 'Start'
+    document.querySelector('audio').stop()
     toggleFlashing(false)
     toggleButtonColor(true)
     toggleTextAnimation(false)
@@ -100,7 +122,12 @@ function runCounters(start) {
     var totalCounter
 
     if (start) {
-        document.querySelector('audio').play()
+
+        if (soundOn) {
+            document.querySelector('audio').play()
+        }
+
+
         tenthsCounter++
         document.querySelector('.tenths-container').style.transform = 'rotateZ(' + tenthsCounter * 6 + 'deg)'
 
@@ -145,7 +172,10 @@ function runCounters(start) {
 
         document.querySelector('.tenths-container').style.transform = 'rotateZ(0deg)'
 
-                document.querySelector('audio').stop()
+        if (soundOn) {
+            document.querySelector('audio').stop()
+        }
+
         return 0
     }
 
