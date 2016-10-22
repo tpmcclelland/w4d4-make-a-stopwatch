@@ -10,21 +10,16 @@ body {
 }
 
 .wrapper {
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
     padding: 20px;
 }
 
 .watch-frame {
-    // flex: 1;
     border: 1px solid black;
     border-radius: 15px;
     width: 400px;
     height: 400px;
     text-align: center;
     background: black;
-    // color: white;
 }
 
 .watch-type {
@@ -63,15 +58,6 @@ body {
   height: 75px;
 }
 
-#canvas {
-    // color: white;
-    // background: white
-    // z-index: -1;
-    margin: -5px;
-    position: relative;
-    top: -13px;
-}
-
 .clock {
   border-radius: 50%;
   background: #fff url(../img/ios_clock.svg) no-repeat center;
@@ -104,16 +90,6 @@ body {
   left: 0;
 }
 
-.hours {
-  background: #000;
-  height: 20%;
-  left: 48.75%;
-  position: absolute;
-  top: 30%;
-  transform-origin: 50% 100%;
-  width: 2.5%;
-}
-
 .minutes {
   background: #000;
   height: 40%;
@@ -135,26 +111,9 @@ body {
   z-index: 8;
 }
 
-// @keyframes rotate {
-//   100% {
-//     transform: rotateZ(360deg);
-//   }
-// }
-//
-// .hours-container {
-//   animation: rotate 43200s infinite linear;
-// }
-// .minutes-container {
-//   animation: rotate 3600s infinite linear;
-// }
-// .seconds-container {
-//   animation: rotate 60s infinite linear;
-// }
-
 .timer-window {
     width: 200px;
     height: 40px;
-    // border: 1px solid white;
     margin: 20px;
     padding: 5px;
     position: relative;
