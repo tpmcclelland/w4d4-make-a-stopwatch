@@ -17,33 +17,103 @@ body {
 .watch-frame {
   border: 1px solid black;
   border-radius: 15px;
-  width: 250px;
-  height: 250px;
+  width: 400px;
+  height: 400px;
   text-align: center;
-  background: black;
-  color: white; }
+  background: black; }
 
 .watch-type {
   color: RGBA(229, 151, 55, 1);
-  padding: 8px 15px 5px 5px;
-  font-size: 20px; }
+  padding: 10px 15px 5px 15px;
+  font-size: 25px; }
 
 .time {
   text-align: right;
-  padding: 8px 15px 5px 5px;
+  padding: 10px 15px 5px 15px;
   color: lightgrey;
-  font-size: 20px; }
+  font-size: 25px; }
+
+.btn {
+  padding: 0 12px;
+  font-size: 13px; }
 
 #start-btn {
   position: relative;
-  top: -110px;
-  left: 77px;
-  border-radius: 100%; }
+  top: -130px;
+  left: 190px;
+  border-radius: 100%;
+  width: 75px;
+  height: 75px; }
+
+#reset-btn {
+  position: relative;
+  top: -130px;
+  left: -190px;
+  border-radius: 100%;
+  width: 75px;
+  height: 75px; }
 
 #canvas {
   margin: -5px;
   position: relative;
   top: -13px; }
+
+.clock {
+  border-radius: 50%;
+  background: #fff url(../img/ios_clock.svg) no-repeat center;
+  background-size: 88%;
+  height: 20em;
+  padding-bottom: 31%;
+  position: relative;
+  width: 20em;
+  margin: 20px 10px 10px 55px; }
+
+.clock:after {
+  background: #000;
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 5%;
+  height: 5%;
+  z-index: 10; }
+
+.minutes-container, .hours-container, .seconds-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+
+.hours {
+  background: #000;
+  height: 20%;
+  left: 48.75%;
+  position: absolute;
+  top: 30%;
+  transform-origin: 50% 100%;
+  width: 2.5%; }
+
+.minutes {
+  background: #000;
+  height: 40%;
+  left: 49%;
+  position: absolute;
+  top: 10%;
+  transform-origin: 50% 100%;
+  width: 2%; }
+
+.seconds {
+  background: #000;
+  height: 45%;
+  left: 49.5%;
+  position: absolute;
+  top: 14%;
+  transform-origin: 50% 80%;
+  width: 1%;
+  z-index: 8; }
 
 .timer-window {
   width: 200px;
@@ -51,9 +121,9 @@ body {
   margin: 20px;
   padding: 5px;
   position: relative;
-  top: -130px;
+  top: -140px;
   font-size: 30px;
-  left: 5px; }
+  left: 70px; }
 
 #shortcuts {
   padding: 20px; }
