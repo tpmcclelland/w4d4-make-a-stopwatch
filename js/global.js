@@ -65,6 +65,7 @@ function start() {
 //clear interval and toggle paused to true
 function pause() {
     clearInterval(timer)
+    document.querySelector('audio').stop()
     paused = true
     toggleFlashing(true)
     toggleButtonColor(true)
@@ -99,6 +100,7 @@ function runCounters(start) {
     var totalCounter
 
     if (start) {
+        document.querySelector('audio').play()
         tenthsCounter++
         document.querySelector('.tenths-container').style.transform = 'rotateZ(' + tenthsCounter * 6 + 'deg)'
 
@@ -142,9 +144,19 @@ function runCounters(start) {
         document.querySelector('.seconds-container').style.transform = 'rotateZ(0deg)'
 
         document.querySelector('.tenths-container').style.transform = 'rotateZ(0deg)'
+
+                document.querySelector('audio').stop()
         return 0
     }
 
+}
+
+//Needed to stp audio
+//Give the Audio element a stop function
+HTMLAudioElement.prototype.stop = function()
+{
+    this.pause();
+    this.currentTime = 0.0;
 }
 
 //toggles animation using animate.css based on paused toggle
